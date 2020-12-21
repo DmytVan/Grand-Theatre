@@ -10,10 +10,10 @@ window.addEventListener('scroll', function() {
 const burgerMenu = document.getElementById('burgerMenu');
 const headerNav = document.getElementsByClassName('header-nav')[0];
 burgerMenu.onclick = function () {
-    headerNav.classList.add('header__nav-active');
+    headerNav.classList.add('header__nav-header-nav-active');
 };
 const closeHeaderNav = document.getElementById('closeHeaderNav');
 document.onclick = function (e) {
     if (e.target === headerNav || e.target === burgerMenu) return;
-    headerNav.classList.remove('header__nav-active');
+    headerNav.classList.remove('header-nav-active-active');
 };
