@@ -1,0 +1,33 @@
+.partners {
+  margin-bottom: 120px;
+}
+.partners-header {
+  font-family: "Open_Sans_Condensed";
+  font-style: normal;
+  font-weight: 300;
+  font-size: 48px;
+  line-height: 65px;
+  text-align: center;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  margin-bottom: 100px;
+}
+.partners-logo-row {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  &:first-child {
+    margin-bottom: 80px;
+  }
+  .partners-logo {
+    margin-right: 78px;
+  }
+}
+
+.partners-mobile {
+  display: none;
+}
+.partners-nonloop:first-child {
+  margin-bottom: 80px;
+}
+

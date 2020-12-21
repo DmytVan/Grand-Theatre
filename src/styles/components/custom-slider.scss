@@ -1,0 +1,125 @@
+.custom-slider {
+  position: relative;
+  margin-right: 35px;
+  min-width: 370px;
+}
+.custom-slider img{
+  position: absolute;
+  z-index: 1;
+  top: 20px;
+  left: 20px;
+  height: auto;
+}
+.custom-slider-blackout {
+  position: absolute;
+  top: 20px;
+  left: 20px;
+  width: 350px;
+  height: 490px;
+  background-color: #D1A954;
+  opacity: .85;
+  z-index: 2;
+}
+
+.custom-slider .custom-slider-top-img {
+  position: absolute;
+  z-index: 3;
+  top: 0;
+  left: 0;
+}
+
+
+.slider-in-right {
+  animation-name: rotateRight;
+  animation-duration: .4s;
+  /*animation-fill-mode: forwards;*/
+}
+
+.slide-out-left {
+  animation-name: rotateLeft;
+  animation-direction: reverse;
+  animation-duration: .4s;
+  /*animation-fill-mode: forwards;*/
+}
+
+.slide-in-left {
+  animation-name: rotateLeft;
+  animation-duration: .4s;
+}
+
+.slider-out-right {
+  animation-name: rotateRight;
+  animation-duration: .4s;
+  animation-direction: reverse;
+}
+
+
+@keyframes rotateLeft {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(0deg) translateZ(0px);
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+  }
+
+  100% {
+    opacity: 0;
+    transform-origin: 50% 0;
+    transform: perspective(800px) rotateY(-180deg) translateZ(300px);
+    top: 20px;
+    left: 20px;
+  }
+}
+
+@keyframes rotateRight {
+  0% {
+    opacity: 1;
+    transform-origin: 0 0;
+    transform: perspective(800px) rotateY(0deg) translateZ(0px);
+    top: 0;
+    left: 0;
+    z-index: 3;
+
+  }
+
+  100% {
+
+    -webkit-transform-origin: 50% 0;
+    transform-origin: 50% 0;
+    transform: perspective(800px) rotateY(180deg) translateZ(1000px);
+    z-index: 1;
+    top: 20px;
+    left: 20px;
+  }
+}
+
+
+.custom-slider-nav {
+  padding-top: 535px;
+  display: flex;
+  justify-content: space-between;
+  font-size: 18px;
+  line-height: 25px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #C4C4C4;
+}
+.custom-slider-left-btn {
+  cursor: pointer;
+  padding-left: 65px;
+  background: url($img-url + 'png/arrow-left.png') left center no-repeat;
+  &:hover {
+    opacity: .7;
+  }
+}
+.custom-slider-right-btn {
+  cursor: pointer;
+  padding-right: 65px;
+  background: url($img-url + 'png/arrow-right.png') right center no-repeat;
+  &:hover {
+    opacity: .7;
+  }
+}

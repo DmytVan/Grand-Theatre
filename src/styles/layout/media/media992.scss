@@ -1,0 +1,92 @@
+@media screen and (max-width: 1400px){
+
+  .wrapper {
+    max-width: 692px;
+    padding: 0;
+  }
+  .header-wrapper {
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+  }
+  .header-nav-list {
+    margin-bottom: 50px;
+  }
+  .header-nav-item {
+    margin-right: 29px;
+    white-space: pre;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+  .contact-number {
+    transform: translate(-25px);
+  }
+
+  .into-content-wrapper {
+    margin-right: 0;
+  }
+
+  .custom-slider {
+    display: none;
+  }
+  .about-card-pic {
+    display: none;
+  }
+
+  .productions-desktop {
+    display: none;
+  }
+  .productions-mobile {
+    display: block;
+  }
+  .productions-pic {
+    margin-left: 0;
+  }
+
+  .nominations {
+    background-image: url($img-url + 'nominations.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 126px 0;
+  }
+  .nominations-container {
+    max-width: 692px;
+    background-image: none;
+    padding: 0;
+  }
+  .nominations-container-years {
+    margin-right: 58px;
+  }
+  .nominations-star {
+    margin-right: 20px;
+    &:last-child {
+      margin-right: 0;
+    }
+  }
+
+  .partners-desktop {
+    display: none;
+  }
+  .partners-mobile {
+    display: block;
+  }
+
+  .footer-content {
+    flex-direction: column-reverse;
+  }
+  .footer-contacts {
+    display: flex;
+    justify-content: space-between;
+  }
+  .footer-contacts-num {
+    white-space: nowrap;
+  }
+  .footer-contacts-addresses {
+    text-align: right;
+  }
+
+  .footer-form {
+    margin-bottom: 80px;
+  }
+}

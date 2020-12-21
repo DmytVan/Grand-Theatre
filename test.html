@@ -1,0 +1,164 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+        .custom-slider {
+            position: relative;
+            margin-left:  300px;
+        }
+        .custom-slider img{
+            position: absolute;
+            z-index: 1;
+            top: 20px;
+            left: 20px;
+
+        }
+        .custom-slider-blackout {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            width: 350px;
+            height: 490px;
+            background-color: #D1A954;
+            opacity: .85;
+            z-index: 2;
+        }
+
+        .custom-slider .custom-slider-top-img {
+            position: absolute;
+            z-index: 3;
+            top: 0;
+            left: 0;
+        }
+
+
+        .slider-in-right {
+            animation-name: rotateRight;
+            animation-duration: .4s;
+            /*animation-fill-mode: forwards;*/
+        }
+
+        .slide-out-left {
+            animation-name: rotateLeft;
+            animation-direction: reverse;
+            animation-duration: .4s;
+            /*animation-fill-mode: forwards;*/
+        }
+
+        .slide-in-left {
+            animation-name: rotateLeft;
+            animation-duration: .4s;
+        }
+
+        .slider-out-right {
+            animation-name: rotateRight;
+            animation-duration: .4s;
+            animation-direction: reverse;
+        }
+
+
+        @keyframes rotateLeft {
+            0% {
+                opacity: 1;
+                transform-origin: 0 0;
+                transform: perspective(800px) rotateY(0deg) translateZ(0px);
+                top: 0;
+                left: 0;
+                z-index: 3;
+
+            }
+
+            100% {
+                opacity: 0;
+                transform-origin: 50% 0;
+                transform: perspective(800px) rotateY(-180deg) translateZ(300px);
+                top: 20px;
+                left: 20px;
+            }
+        }
+
+        @keyframes rotateRight {
+            0% {
+                opacity: 1;
+                transform-origin: 0 0;
+                transform: perspective(800px) rotateY(0deg) translateZ(0px);
+                top: 0px;
+                left: 0px;
+                z-index: 3;
+
+            }
+
+            100% {
+
+                -webkit-transform-origin: 50% 0;
+                transform-origin: 50% 0;
+                transform: perspective(800px) rotateY(180deg) translateZ(1000px);
+                z-index: 1;
+                top: 20px;
+                left: 20px;
+            }
+        }
+
+
+        .custom-slider-nav {
+            padding-top: 520px;
+        }
+    </style>
+</head>
+<body>
+<div class="custom-slider">
+    <img width="350" height="490" class="custom-slider-top-img" src="image%203.jpg" alt="a">
+    <img width="350" height="490" src="image%203.jpg" alt="a">
+    <div class="custom-slider-blackout"></div>
+    <div class="custom-slider-nav">
+        <span class="custom-slider-left-btn">←</span>
+        <span class="custom-slider-right-btn">→</span>
+    </div>
+</div>
+
+<script>
+    const rightBtn = document.getElementsByClassName('custom-slider-right-btn')[0];
+    rightBtn.addEventListener('click', () => {
+        const topImg = document.getElementsByClassName('custom-slider-top-img')[0];
+        const nextImg = document.querySelector('.custom-slider-top-img+img') ? document.querySelector('.custom-slider-top-img~img') : document.querySelector('.custom-slider > img');
+        console.log(nextImg);
+        topImg.addEventListener('animationend', () => {
+            topImg.classList.remove('custom-slider-top-img');
+            topImg.classList.remove('slide-out-left');
+        });
+        nextImg.addEventListener('animationend', () => {
+            nextImg.classList.add('custom-slider-top-img');
+            nextImg.classList.remove('slider-in-right');
+        });
+        topImg.classList.add('slide-out-left');
+        nextImg.classList.add('slider-in-right');
+    });
+
+    const leftBtn = document.getElementsByClassName('custom-slider-left-btn')[0];
+    leftBtn.addEventListener('click', () => {
+        const customSliderImgs = Array.from(document.querySelectorAll('.custom-slider > img'));
+        const topImg = document.getElementsByClassName('custom-slider-top-img')[0];
+        console.log(customSliderImgs.indexOf(topImg))
+        const prevImg = customSliderImgs[(customSliderImgs.indexOf(topImg) === 0 ? customSliderImgs.length-1 : customSliderImgs.indexOf(topImg)-1)];
+        topImg.addEventListener('animationend', () => {
+            topImg.classList.remove('custom-slider-top-img');
+            topImg.classList.remove('slide-in-left');
+        });
+        console.log(customSliderImgs.length)
+        prevImg.addEventListener('animationend', () => {
+            prevImg.classList.add('custom-slider-top-img');
+            prevImg.classList.remove('slider-out-right');
+        });
+        topImg.classList.add('slide-in-left');
+        prevImg.classList.add('slider-out-right');
+    });
+
+
+
+
+    // topImg.classList.remove('slider-in-right');
+</script>
+</body>
+</html>
