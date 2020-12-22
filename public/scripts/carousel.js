@@ -3,7 +3,6 @@ $('.nonloop').owlCarousel({
     freeDrag: false,
     autoWidth:true,
     autoHeight: true,
-    items: 4,
 });
 
 $('.partners-nonloop').owlCarousel({
