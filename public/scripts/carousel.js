@@ -2,7 +2,8 @@ $('.nonloop').owlCarousel({
     loop:false,
     freeDrag: false,
     autoWidth:true,
-    autoHeight: true
+    autoHeight: true,
+    items: 4,
 });
 
 $('.partners-nonloop').owlCarousel({
