@@ -1,3 +1,7 @@
+.nominations {
+  margin-bottom: 150px;
+}
+
 .nominations-container {
   background-image: url($img-url + 'nominations.jpg');
   background-size: cover;
@@ -5,7 +9,6 @@
   padding: 126px 95px 126px 190px;
   display: flex;
   flex-wrap: nowrap;
-  margin-bottom: 150px;
 }
 .nominations-container-years {
   display: flex;

@@ -43,8 +43,8 @@
   border-bottom: 2px solid #D1A954;;
   transition: all .2s;
   letter-spacing: 0.05em;
-  &:hover {
-    padding-bottom: 2px;
+  &:hover, &:active {
+    border-bottom: 2px solid #4db439;;
   }
 }
 

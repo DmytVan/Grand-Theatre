@@ -25,7 +25,7 @@
 }
 .productions-pic-item {
   position: relative;
-  &:hover {
+  &:hover, &:active {
     .productions-photo-search {
       display: block;
     }

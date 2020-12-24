@@ -18,12 +18,12 @@
                 <span class="burger-line burger-line-third"></span>
             </div>
             <nav class="header-nav">
-                <ul class="header-nav-list">
-                    <li class="header-nav-item"><a href="#!">Главная</a></li>
-                    <li class="header-nav-item"><a href="#!">о театре</a></li>
-                    <li class="header-nav-item"><a href="#!">Наши постановки</a></li>
-                    <li class="header-nav-item"><a href="#!">партнеры театра</a></li>
-                    <li class="header-nav-item"><a href="#!">контакты</a></li>
+                <ul class="header-nav-list" id="menu">
+                    <li class="header-nav-item"><a href="#intro">Главная</a></li>
+                    <li class="header-nav-item"><a href="#about">о театре</a></li>
+                    <li class="header-nav-item"><a href="#productions">Наши постановки</a></li>
+                    <li class="header-nav-item"><a href="#partners">партнеры театра</a></li>
+                    <li class="header-nav-item"><a href="#contacts">контакты</a></li>
                 </ul>
                 <div id="closeHeaderNav" class="header-nav-close">
                     <span class="header-nav-close-line"></span>
@@ -47,7 +47,7 @@
     </div>
 </header>
 <main>
-    <section class="intro">
+    <section class="intro" id="intro">
         <div class="wrapper">
             <div class="contact-info">
                 <p class="contact-info-desc">
@@ -90,7 +90,7 @@
         </div>
     </section>
 
-    <section class="about">
+    <section class="about" id="about">
         <div class="wrapper">
             <h2 class="about-header">
                 <span class="highlight">о</span> театре
@@ -136,63 +136,15 @@
             </div>
         </div>
     </section>
-    <section class="productions productions-desktop">
-        <h2 class="productions-header">
-            <span class="highlight">наши</span> постановки
-        </h2>
-        <div class="productions-pic">
-            <figure class="productions-pic-item">
-                <img src="img/theater1.jpg" alt="theater1">
 
-                <div class="productions-pic-blur">
-                    <div class="productions-photo-title">ОСКАР 2020</div>
-                    <div class="productions-photo-desc">сентябрь 2020</div>
-                </div>
-                <div class="productions-photo-search">
-                    <img src="img/png/search.png" alt="search">
-                </div>
-            </figure>
-            <figure class="productions-pic-item">
-                <img src="img/theater2.jpg" alt="theater2">
-                <div class="productions-pic-blur"></div>
-                <div class="productions-photo-search">
-                    <img src="img/png/search.png" alt="search">
-                </div>
-            </figure>
-            <figure class="productions-pic-item">
-                <img src="img/theater3.jpg" alt="theater3">
-                <div class="productions-pic-blur">
-                    <div class="productions-photo-title">золотой грамофон</div>
-                    <div class="productions-photo-desc">сентябрь 2020</div>
-                </div>
-                <div class="productions-photo-search">
-                    <img src="img/png/search.png" alt="search">
-                </div>
-            </figure>
-            <figure class="productions-pic-item">
-                <img src="img/theater4.jpg" alt="theater4">
-                <div class="productions-pic-blur">
-                    <div class="productions-photo-title">ОСКАР 2020</div>
-                    <div class="productions-photo-desc">сентябрь 2020</div>
-                </div>
-                <div class="productions-photo-search">
-                    <img src="img/png/search.png" alt="search">
-                </div>
-            </figure>
-        </div>
-    </section>
-
-    <!--
-    -->
-    <section class="productions productions-mobile">
-        <div class="wrapper">
+    <div  id="productions">
+        <section class="productions productions-desktop">
             <h2 class="productions-header">
                 <span class="highlight">наши</span> постановки
             </h2>
-            <div class=" productions-pic owl-carousel nonloop">
-                <div style="min-width: 442px">
+            <div class="productions-pic">
                 <figure class="productions-pic-item">
-                    <img src="img/theater1.jpg" alt="theater1" height="550" width="442" style="min-width: 442px">
+                    <img src="img/theater1.jpg" alt="theater1">
 
                     <div class="productions-pic-blur">
                         <div class="productions-photo-title">ОСКАР 2020</div>
@@ -202,19 +154,15 @@
                         <img src="img/png/search.png" alt="search">
                     </div>
                 </figure>
-                </div>
-                <div style="min-width: 442px">
                 <figure class="productions-pic-item">
-                    <img src="img/theater2.jpg" alt="theater2" height="550" width="443" style="min-width: 442px">
+                    <img src="img/theater2.jpg" alt="theater2">
                     <div class="productions-pic-blur"></div>
                     <div class="productions-photo-search">
                         <img src="img/png/search.png" alt="search">
                     </div>
                 </figure>
-                </div>
-                <div style="min-width: 442px">
                 <figure class="productions-pic-item">
-                    <img src="img/theater3.jpg" alt="theater3" height="550" width="442" style="min-width: 442px">
+                    <img src="img/theater3.jpg" alt="theater3">
                     <div class="productions-pic-blur">
                         <div class="productions-photo-title">золотой грамофон</div>
                         <div class="productions-photo-desc">сентябрь 2020</div>
@@ -223,10 +171,8 @@
                         <img src="img/png/search.png" alt="search">
                     </div>
                 </figure>
-                </div>
-                <div style="min-width: 442px">
                 <figure class="productions-pic-item">
-                    <img src="img/theater4.jpg" alt="theater4" height="550" width="442" style="min-width: 442px">
+                    <img src="img/theater4.jpg" alt="theater4">
                     <div class="productions-pic-blur">
                         <div class="productions-photo-title">ОСКАР 2020</div>
                         <div class="productions-photo-desc">сентябрь 2020</div>
@@ -235,11 +181,71 @@
                         <img src="img/png/search.png" alt="search">
                     </div>
                 </figure>
+            </div>
+        </section>
+
+        <!--
+        -->
+        <section class="productions productions-mobile">
+            <div class="wrapper">
+                <h2 class="productions-header">
+                    <span class="highlight">наши</span> постановки
+                </h2>
+                <div class=" productions-pic owl-carousel nonloop">
+                    <div style="min-width: 442px">
+                        <figure class="productions-pic-item">
+                            <img src="img/theater1.jpg" alt="theater1" height="550" width="442"
+                                 style="min-width: 442px">
+
+                            <div class="productions-pic-blur">
+                                <div class="productions-photo-title">ОСКАР 2020</div>
+                                <div class="productions-photo-desc">сентябрь 2020</div>
+                            </div>
+                            <div class="productions-photo-search">
+                                <img src="img/png/search.png" alt="search">
+                            </div>
+                        </figure>
+                    </div>
+                    <div style="min-width: 442px">
+                        <figure class="productions-pic-item">
+                            <img src="img/theater2.jpg" alt="theater2" height="550" width="443"
+                                 style="min-width: 442px">
+                            <div class="productions-pic-blur"></div>
+                            <div class="productions-photo-search">
+                                <img src="img/png/search.png" alt="search">
+                            </div>
+                        </figure>
+                    </div>
+                    <div style="min-width: 442px">
+                        <figure class="productions-pic-item">
+                            <img src="img/theater3.jpg" alt="theater3" height="550" width="442"
+                                 style="min-width: 442px">
+                            <div class="productions-pic-blur">
+                                <div class="productions-photo-title">золотой грамофон</div>
+                                <div class="productions-photo-desc">сентябрь 2020</div>
+                            </div>
+                            <div class="productions-photo-search">
+                                <img src="img/png/search.png" alt="search">
+                            </div>
+                        </figure>
+                    </div>
+                    <div style="min-width: 442px">
+                        <figure class="productions-pic-item">
+                            <img src="img/theater4.jpg" alt="theater4" height="550" width="442"
+                                 style="min-width: 442px">
+                            <div class="productions-pic-blur">
+                                <div class="productions-photo-title">ОСКАР 2020</div>
+                                <div class="productions-photo-desc">сентябрь 2020</div>
+                            </div>
+                            <div class="productions-photo-search">
+                                <img src="img/png/search.png" alt="search">
+                            </div>
+                        </figure>
+                    </div>
                 </div>
             </div>
-        </div>
-    </section>
-
+        </section>
+    </div>
 
     <!--
     -->
@@ -268,7 +274,7 @@
         </div>
     </div>
 
-    <section class="partners">
+    <section class="partners" id="partners">
         <div class="wrapper">
             <h2 class="partners-header">
                 <span class="highlight">партнеры</span> театра
@@ -289,16 +295,24 @@
             </div>
             <div class="partners-mobile">
                 <div class="owl-carousel partners-nonloop">
-                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96">
-                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96">
-                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96">
-                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96">
+                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96"
+                         style="max-width: 200px">
+                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96"
+                         style="max-width: 200px">
+                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96"
+                         style="max-width: 200px">
+                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96"
+                         style="max-width: 200px">
                 </div>
                 <div class="owl-carousel partners-nonloop partners-mobile">
-                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96">
-                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96">
-                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96">
-                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96">
+                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96"
+                         style="max-width: 200px">
+                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96"
+                         style="max-width: 200px">
+                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96"
+                         style="max-width: 200px">
+                    <img class="partners-logo" src="img/png/logo-gazprom.png" alt="gazprom" width="200" height="96"
+                         style="max-width: 200px">
                 </div>
             </div>
         </div>
@@ -307,7 +321,7 @@
     </section>
 </main>
 
-<footer class="footer">
+<footer class="footer" id="contacts">
     <div class="wrapper">
         <h2 class="footer-header">
             <span class="highlight">стать</span> меценатом
